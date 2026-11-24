@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/ver_receta.css">
+    <title>Ver Receta</title>
+</head>
+
+<body>
+    <div id="banner">
+
+        <nav>
+
+            <div id="logo">
+
+                <a href="index.html">
+                    LoveRecipe
+                </a>
+
+            </div>
+
+            <div class="botones_inicio">
+
+                <div class="btn_nav">
+                    <a href="">
+                        Recetas
+                    </a>
+                </div>
+
+                <!--Sesion iniciada-->
+
+                <div id="SesionIniciada">
+
+                    <div id="favoritos">
+                        <a href="">
+                            Favoritos
+                        </a>
+                    </div>
+
+                    <img />
+
+                    <div id="perfil">
+
+                        <div id="userPerfil">
+                            [Usuario]
+                        </div>
+
+                        <div id="listaDesplegable">
+                            <ul>
+                                <li>Cerrar sesion</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+    <!--HOJA DE INTRODUCCION-->
+
+    <main id="inicioPagina">
+
+        <div id="pasta_cuaderno">
+
+            <div id="hoja_detras">
+
+                <div class="pinchos"></div>
+
+                <div id="hoja_inicial">
+
+                    <div id="clip"></div>
+
+                    <div id="detalles_receta">
+
+                        <div id="cerrar" onclick="volverCatalogo()">X</div>
+
+                        <div id="cuadro_preview">
+                            <img id="PreviewImagenComida">
+                        </div>
+
+                        <div id="info_receta">
+
+                            <div id="ver_detalles_comida_titulo">
+                                <div id="cuadro_titulo">Titulo receta</div>
+                            </div>
+
+                            <div id="detalles_comida_desc">
+                                <div id="cuadro_descripcion">Descripcion receta</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="contenedor_contenido">
+                        <h2>Preparacion</h2>
+                        <div id="ver_contenido"></div>
+                    </div>
+
+                    <!--Solo si la sesion esta activa-->
+                    <button id="btn_volver" onclick="volverCatalogo()">Volver al catalogo</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+<script src="js/ver_receta.js"></script>
+
+</html>
