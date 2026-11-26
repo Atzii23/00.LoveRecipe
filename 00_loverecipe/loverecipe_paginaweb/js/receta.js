@@ -74,7 +74,6 @@ Input_imagen.addEventListener("change", () => {
 
 const idEditarRec = localStorage.getItem("editarRecId");
 
-// se obtienen los datos de la receta que se quiere cambiar
 if (idEditarRec) {
     fetch("http://localhost:3000/obtener_ver_receta_" + idEditarRec).then(recurso => recurso.json()).then(respuesta => {
         CrearReceta_titulo.value = respuesta.titulo;
@@ -87,7 +86,6 @@ if (idEditarRec) {
     });
 }
 
-// Un SOLO listener para guardar: si hay idEditarRec hace PUT, si no hace POST
 btnGuardarReceta.addEventListener("click", () => {
 
     //empaque q empaqueta el valor q el usuario ponga em el 
@@ -127,34 +125,3 @@ function volverCatalogo() {
     window.location.href = "catalogo.html";
 }
 
-
-/*
-function btn_guardarReceta(){
-    const objetos_nuevaReceta = {
-        titulo: CrearReceta_titulo.value,
-        descripcion: CrearReceta_descripcion.value,
-        imagen: PreviewImagenComida.src,
-        contenido: textArea.innerHTML
-    }
-
-    fetch("http://localhost:3000/CrearReceta").then(recurso => recurso.json()).then(respuesta => {
-        method: "POST",
-        body: JSON.stringify(objetos_nuevaReceta)
-    });
-};
-*/
-
-
-/*
-btnGuardarReceta.addEventListener("click", () => {
-
-    const objetos_nuevaReceta = {
-        titulo: CrearReceta_titulo.value,
-        descripcion: CrearReceta_descripcion.value,
-        imagen: PreviewImagenComida.src,
-        contenido: textArea.innerHTML
-    };
-
-    console.log(objetos_nuevaReceta);
-});
-*/
